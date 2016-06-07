@@ -86,7 +86,6 @@ NAN_METHOD(Statement::New) {
     }
 
     int length = info.Length();
-    Nan::ThrowError(info[0]);
     Nan::ThrowError(info[1]);
 
     if (length <= 0 || !Database::HasInstance(info[0])) {
