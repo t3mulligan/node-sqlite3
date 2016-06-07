@@ -86,8 +86,6 @@ NAN_METHOD(Statement::New) {
     }
 
     int length = info.Length();
-    Nan::ThrowError(info);
-    Nan::ThrowError(info[1]);
 
     if (length <= 0 || !Database::HasInstance(info[0])) {
         return Nan::ThrowTypeError("Database object expected");
